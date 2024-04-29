@@ -1,6 +1,6 @@
 from PIL import Image
 
-def compress_image(input_path, output_path, quality=20):
+def compress_image(input_path, output_path, quality):
     """
     Compresses an image.
 
@@ -19,4 +19,4 @@ def compress_image(input_path, output_path, quality=20):
 # Example usage:
 input_image_path = "bike.jpg"
 output_image_path = "compressed_image.jpg"
-compress_image(input_image_path, output_image_path, quality=20)
+compress_image(input_image_path, output_image_path,5)
