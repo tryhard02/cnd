@@ -12,7 +12,7 @@ public class Client {
 
             clientSocket = new Socket("localhost", 6789); // Connect to server on localhost, port 6789 
 
-            System.out.println("Client connected to server"); 
+            System.out.print("Provide Message to Pass TO Server: ");
 
             // Create input and output streams for communication 
 
@@ -22,13 +22,13 @@ public class Client {
 
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in)); 
 
-            String messageToSend = "Hello Server!"; 
+            String messageToSend = " ";
+            
 
             while ((messageToSend = userInput.readLine()) != null) { 
-
                 out.println(messageToSend); // Send message to server 
-
-                System.out.println("Received from server: " + in.readLine()); // Receive server's response 
+                System.out.println("Received from server: " + in.readLine() +"\n");
+                System.out.print("Provide Message to Pass To Server: ");  // Receive server's response 
 
             } 
 
