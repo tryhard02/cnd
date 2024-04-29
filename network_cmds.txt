@@ -1,0 +1,11 @@
+ping -  eg ping google.com
+
+tracert  - tracert google.com
+
+ipconfig
+
+ipconfig/all
+
+nslookup  - nslookup google.com
+
+netstat
