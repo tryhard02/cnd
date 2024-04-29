@@ -25,15 +25,18 @@ public class Server {
                 BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream())); 
 
                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true); 
-
-                String messageFromClient = ""; 
-
+                
+ 
+                String messageFromClient = " "; 
                 while ((messageFromClient = in.readLine()) != null) { 
 
                     System.out.println("Received from client: " + messageFromClient); 
-
-                    out.println("Server response: " + messageFromClient); // Echo back to client 
-
+                    System.out.print("Provide Message to Pass To Client: ");
+                    BufferedReader serverInput = new BufferedReader(new InputStreamReader(System.in)); 
+                    String svout = serverInput.readLine();
+                    if((svout) != null){
+                        out.println(svout); // Echo back to client 
+                    }
                 } 
 
                 clientSocket.close(); // Close connection after communication ends 
